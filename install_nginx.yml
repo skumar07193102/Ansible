@@ -1,5 +1,5 @@
 - name: "installation of nginx"
-  hosts: "inventory.ini"
+  hosts: target
   tasks:
   - name: "nginx install"
     ansible.builtin.package:
