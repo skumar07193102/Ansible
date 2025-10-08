@@ -1,9 +1,10 @@
 - name: loops in ansible
   hosts: mongodb, catalogue
+  become: yes
   tasks:
   - name: install packages on mongodb
     ansible.builtin.package:
-      name: {{ item }}
+      name: "{{ item }}"
       state: present
     loop:
     - mongodb
@@ -14,7 +15,7 @@
     when: hosts=mongodb
   - name: install packages on catalogue
     ansible.builtin.package:
-      name: {{ item }}
+      name: "{{ item }}""
       state: latest
     loop:
     - nodejs:20
