@@ -15,5 +15,5 @@
       name: "{{ item }}"
       state: latest
     loop:
-    - nodejs:20
+    - nodejs
     - mysql-server
