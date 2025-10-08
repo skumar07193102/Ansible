@@ -1,7 +1,7 @@
 - name: loops in ansible
   become: yes
   tasks:
-  - name: "install packages on mongodb"
+  - name: install packages on mongodb
     hosts: mongodb
     ansible.builtin.package:
       name: "{{ item }}"
