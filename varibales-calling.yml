@@ -1,0 +1,9 @@
+- name: Playlevel variables
+  hosts: ansible
+  connection: local
+  vars_files:
+  - vars.yml
+  tasks:
+  - name: print the details
+    ansible.builtin.debug:
+      msg: " this is {{ course }} {{ Batch }} teach by {{ trainer }}"
