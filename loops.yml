@@ -15,7 +15,7 @@
     when: hosts=mongodb
   - name: install packages on catalogue
     ansible.builtin.package:
-      name: "{{ item }}""
+      name: "{{ item }}"
       state: latest
     loop:
     - nodejs:20
