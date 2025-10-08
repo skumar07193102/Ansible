@@ -1,4 +1,4 @@
-- name: variables from inventory
+- name: variables passing through arguments
   hosts: ansible
   connection: local
   tasks:
