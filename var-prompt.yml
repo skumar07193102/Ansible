@@ -1,0 +1,11 @@
+- name: Playlevel variables
+  hosts: ansible
+  connection: local
+  vars_prompt:
+  - name: user
+    prompt: Enter the user name
+    private: false
+  tasks:
+  - name: print the details
+    ansible.builtin.debug:
+      msg: " this is {{ course }} {{ Batch }} teach by {{ trainer }}"
