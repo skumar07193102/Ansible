@@ -1,0 +1,14 @@
+- name: loops in ansible
+  hosts: mongodb, catalogue
+  become: yes
+  tasks:
+  - name: install packages on mongodb
+    ansible.builtin.package:
+       name: "{{ item.name }}"
+       state: "{{ item.state }}"
+    loop:
+    - {name: "nginx", state: "absent"}
+    - {name: "telnet", state: "absent"}
+    - {name: "mysql-server", state: "absent"}
+    - {name: "zip", state: "absent"}
+    - {name: "ansible", state: "present"}
