@@ -1,9 +1,9 @@
-- name: " Play 1"
+- name: "Play 1"
   tasks:
   - name: "Task 1"
     ansible.builtin.debug:
-    msg: " this is Play 1 & task 1"
-- name: " Play 2"
+    msg: "this is Play 1 & task 1"
+- name: "Play 2"
   tasks:
   - name: "task 2"
     ansible.builtin.debug:
