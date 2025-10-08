@@ -1,7 +1,7 @@
 - name: when condition in ansible
   hosts: ansible
   connection: local
-  vars_files:
+  vars:
    number: 10
   tasks:
   - name: print if number greatet than 10
