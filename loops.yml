@@ -6,8 +6,8 @@
     ansible.builtin.package:
       name: "{{ item }}"
       state: present
-    ansible.builtin.debug:
-     msg: " installation of {{ item }} is successfull"
+      ansible.builtin.debug:
+        msg: " installation of {{ item }} is successfull"
     loop:
     - nginx
     - telnet
@@ -16,8 +16,8 @@
     ansible.builtin.package:
       name: "{{ item }}"
       state: latest
-    ansible.builtin.debug:
-     msg: " installation of {{ item }} is successfull"
+      ansible.builtin.debug:
+        msg: " installation of {{ item }} is successfull"
     loop:
     - nodejs:20
     - mysql-server
