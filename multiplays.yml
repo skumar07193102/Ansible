@@ -2,9 +2,10 @@
   tasks:
   - name: task 1
     ansible.builtin.debug:
-    msg: "this is Play 1 & task 1"
+     msg: "this is Play 1 & task 1"
+     
 - name: Play 2
   tasks:
   - name: task 2
     ansible.builtin.debug:
-    msg: "this is Play 2 and task 2"
+     msg: "this is Play 2 and task 2"
