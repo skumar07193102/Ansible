@@ -1,0 +1,24 @@
+- name: loops in ansible
+  hosts: mongodb, catalogue
+  tasks:
+  - name: install packages on mongodb
+    ansible.builtin.package:
+      name: {{ item }}
+      state: present
+    loop:
+    - mongodb
+    - telnet
+    - zip
+    ansible.builtin.debug:
+      msg: " installation of {{ name }} is sucessfull"
+    when: hosts=mongodb
+  - name: install packages on catalogue
+    ansible.builtin.package:
+      name: {{ item }}
+      state: latest
+    loop:
+    - nodejs:20
+    - mysql-server
+    ansible.builtin.debug:
+      msg: " installation of {{ name }} is sucessfull"
+    when: hosts=catalogue
