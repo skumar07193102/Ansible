@@ -1,10 +1,11 @@
 - name: Play 1
+  hosts: ansible
   tasks:
   - name: task 1
     ansible.builtin.debug:
      msg: "this is Play 1 & task 1"
-     
 - name: Play 2
+  hosts: ansible
   tasks:
   - name: task 2
     ansible.builtin.debug:
