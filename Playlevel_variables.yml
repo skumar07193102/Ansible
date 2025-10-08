@@ -1,0 +1,11 @@
+- name: Playlevel variables
+  hosts: ansible
+  connection: local
+  vars:
+    course: devsecops
+    Batch: 86s Batch
+    trainer: siva
+  tasks:
+  - name: print the details
+    ansible.builtin.debug:
+      msg: " this is {{course}} {{batch}} teach by {{trainer}}"
