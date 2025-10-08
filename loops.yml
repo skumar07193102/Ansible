@@ -2,7 +2,7 @@
   hosts: mongodb, catalogue
   become: yes
   tasks:
-  - name: install packages on mongodb
+  - name: "install packages on mongodb"
     ansible.builtin.package:
       name: "{{ item }}"
       state: present
