@@ -1,0 +1,12 @@
+- name: when condition in ansible
+  hosts: ansible
+  connection: local
+  vars-prompt:
+  - name: number
+    prompt: enter the number
+    private: false
+  tasks:
+  - name: print if number greatet than 10
+    ansible.builtin.debug:
+     msg: "Given Number {{ number }} is greater than 10"
+    when: number<10
