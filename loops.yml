@@ -7,11 +7,11 @@
       name: "{{ item }}"
       state: present
     loop:
-    - mongodb
+    - nginx
     - telnet
     - zip
     ansible.builtin.debug:
-      msg: " installation of {{ name }} is sucessfull"
+      msg: " installation of {{ item }} is sucessfull"
     when: hosts=mongodb
   - name: install packages on catalogue
     ansible.builtin.package:
@@ -21,5 +21,5 @@
     - nodejs:20
     - mysql-server
     ansible.builtin.debug:
-      msg: " installation of {{ name }} is sucessfull"
+      msg: " installation of {{ item }} is sucessfull"
     when: hosts=catalogue
