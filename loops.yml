@@ -1,20 +1,23 @@
 - name: loops in ansible
+  hosts: mongodb, catalogue
   become: yes
   tasks:
   - name: install packages on mongodb
-    hosts: mongodb
     ansible.builtin.package:
       name: "{{ item }}"
       state: present
+    ansible.builtin.debug:
+     msg: " installation of {{ item }} is successfull"
     loop:
     - nginx
     - telnet
     - zip
   - name: install packages on catalogue
-    hosts: catalogue
     ansible.builtin.package:
       name: "{{ item }}"
       state: latest
+    ansible.builtin.debug:
+     msg: " installation of {{ item }} is successfull"
     loop:
     - nodejs:20
     - mysql-server
