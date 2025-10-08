@@ -10,8 +10,6 @@
     - nginx
     - telnet
     - zip
-    ansible.builtin.debug:
-      msg: " installation of {{ item }} is sucessfull"
     when: hosts=mongodb
   - name: install packages on catalogue
     ansible.builtin.package:
@@ -20,6 +18,4 @@
     loop:
     - nodejs:20
     - mysql-server
-    ansible.builtin.debug:
-      msg: " installation of {{ item }} is sucessfull"
     when: hosts=catalogue
