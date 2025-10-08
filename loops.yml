@@ -10,7 +10,7 @@
     - nginx
     - telnet
     - zip
-    when: hosts=mongodb
+    when: hosts=mongodb is true
   - name: install packages on catalogue
     ansible.builtin.package:
       name: "{{ item }}"
@@ -18,4 +18,4 @@
     loop:
     - nodejs:20
     - mysql-server
-    when: hosts=catalogue
+    when: hosts=catalogue is true
