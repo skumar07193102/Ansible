@@ -1,5 +1,3 @@
-- name: variables calling from file
-  vars:
-    course: devsecops
-    Batch: 86s Batch
-    trainer: siva
+course: devsecops
+Batch: 86s Batch
+trainer: siva
